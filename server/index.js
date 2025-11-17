@@ -7,7 +7,14 @@ const analysisEngine = require('./utils/analysisEngine');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+// CORS configuration for production
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || '*',
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Health check endpoint
