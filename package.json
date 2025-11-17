@@ -1,0 +1,31 @@
+{
+  "name": "bianexus",
+  "version": "1.0.0",
+  "description": "AI-Powered Bioinformatics Chatbot - Pitch Demo",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "server": "node server/index.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd client && npm install",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js"
+  },
+  "keywords": ["bioinformatics", "AI", "chatbot", "genomics"],
+  "author": "BIAnexus Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  }
+}
