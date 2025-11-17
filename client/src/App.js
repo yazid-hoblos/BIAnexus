@@ -138,7 +138,7 @@ function App() {
               <ProcessingIndicator steps={processingSteps} />
             )}
 
-            {messages.length === 1 && (
+            {!isProcessing && messages.length > 0 && (
               <SampleQueries onSelectQuery={handleSampleQuery} />
             )}
 

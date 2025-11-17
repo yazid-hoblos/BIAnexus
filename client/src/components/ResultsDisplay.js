@@ -258,14 +258,15 @@ const ResultsDisplay = ({ data }) => {
 
           <div className="bg-gray-700/30 rounded-lg p-4">
             <h4 className="text-lg font-semibold text-white mb-3">Expression Levels Across Tissues</h4>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={data.results.tissueExpression} layout="horizontal">
+            <ResponsiveContainer width="100%" height={400}>
+              <BarChart data={data.results.tissueExpression}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                <XAxis type="number" stroke="#9CA3AF" />
-                <YAxis dataKey="tissue" type="category" stroke="#9CA3AF" width={100} />
+                <XAxis dataKey="tissue" stroke="#9CA3AF" angle={-45} textAnchor="end" height={100} />
+                <YAxis stroke="#9CA3AF" label={{ value: 'TPM', angle: -90, position: 'insideLeft', style: { fill: '#9CA3AF' } }} />
                 <Tooltip 
                   contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #374151' }}
                   labelStyle={{ color: '#F3F4F6' }}
+                  formatter={(value) => [`${value} TPM`, 'Expression']}
                 />
                 <Bar dataKey="expression" fill="#16A085">
                   {data.results.tissueExpression.map((entry, index) => (
