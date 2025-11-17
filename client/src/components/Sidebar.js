@@ -9,17 +9,17 @@ const Sidebar = ({ messages, show, onClose }) => {
       {/* Overlay */}
       {show && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40"
           onClick={onClose}
         />
       )}
       
       {/* Sidebar */}
       <div className={`
-        fixed lg:static inset-y-0 left-0 z-50
+        fixed inset-y-0 left-0 z-50
         w-64 bg-gray-800 border-r border-gray-700
         transform transition-transform duration-300 ease-in-out
-        ${show ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        ${show ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <div className="flex items-center space-x-2">
@@ -28,7 +28,7 @@ const Sidebar = ({ messages, show, onClose }) => {
           </div>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white lg:hidden"
+            className="text-gray-400 hover:text-white"
           >
             <X size={20} />
           </button>

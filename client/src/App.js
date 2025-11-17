@@ -128,7 +128,7 @@ function App() {
         />
 
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4" style={{ maxHeight: 'calc(100vh - 180px)' }}>
+        <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4">
           <div className="max-w-4xl mx-auto">
             {messages.map((message, index) => (
               <ChatMessage key={index} message={message} />
