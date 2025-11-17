@@ -6,7 +6,8 @@ const SampleQueries = ({ onSelectQuery }) => {
   const [samples, setSamples] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/samples')
+    const API_URL = process.env.REACT_APP_API_URL || '';
+    axios.get(`${API_URL}/api/samples`)
       .then(response => setSamples(response.data.categories))
       .catch(error => console.error('Error fetching samples:', error));
   }, []);
