@@ -147,7 +147,7 @@ function App() {
         </div>
 
         {/* Input Area */}
-        <div className="border-t border-gray-700 bg-gray-800 p-4">
+        <div className="bg-gray-800 p-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-end space-x-3">
               <div className="flex-1 bg-gray-700 rounded-lg border border-gray-600 focus-within:border-primary transition-colors">
