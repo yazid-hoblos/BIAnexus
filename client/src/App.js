@@ -120,7 +120,7 @@ function App() {
       />
 
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col h-screen">
         {/* Header */}
         <Header 
           onToggleSidebar={() => setShowSidebar(!showSidebar)}
@@ -128,7 +128,7 @@ function App() {
         />
 
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+        <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4" style={{ maxHeight: 'calc(100vh - 180px)' }}>
           <div className="max-w-4xl mx-auto">
             {messages.map((message, index) => (
               <ChatMessage key={index} message={message} />
@@ -147,7 +147,7 @@ function App() {
         </div>
 
         {/* Input Area */}
-        <div className="bg-gray-800 p-4">
+        <div className="bg-gray-800 p-4 flex-shrink-0">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-end space-x-3">
               <div className="flex-1 bg-gray-700 rounded-lg border border-gray-600 focus-within:border-primary transition-colors">

@@ -8,7 +8,8 @@ const Header = ({ onToggleSidebar, onReset }) => {
         <div className="flex items-center space-x-4">
           <button
             onClick={onToggleSidebar}
-            className="text-gray-400 hover:text-white transition-colors lg:hidden"
+            className="text-gray-400 hover:text-white transition-colors"
+            title="Toggle history"
           >
             <Menu size={24} />
           </button>
