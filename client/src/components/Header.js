@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dna, Menu, RotateCcw, Download } from 'lucide-react';
+import { Menu, RotateCcw } from 'lucide-react';
 
 const Header = ({ onToggleSidebar, onReset }) => {
   return (
@@ -14,9 +14,11 @@ const Header = ({ onToggleSidebar, onReset }) => {
             <Menu size={24} />
           </button>
           <div className="flex items-center space-x-3">
-            <div className="bg-primary p-2 rounded-lg">
-              <Dna size={28} className="text-white" />
-            </div>
+            <img 
+              src="/logo.jpeg" 
+              alt="BIAnexus Logo" 
+              className="h-12 w-12 rounded-lg object-cover"
+            />
             <div>
               <h1 className="text-2xl font-bold text-white">BIAnexus</h1>
               <p className="text-xs text-gray-400">AI-Powered Bioinformatics Assistant</p>
