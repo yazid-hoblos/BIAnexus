@@ -164,7 +164,7 @@ function App() {
               <button
                 onClick={handleSend}
                 disabled={!input.trim() || isProcessing}
-                className="bg-primary hover:bg-green-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white p-3 rounded-lg transition-colors flex items-center justify-center"
+                className="bg-primary hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white p-3 rounded-lg transition-colors flex items-center justify-center"
                 style={{ minWidth: '50px', minHeight: '50px' }}
               >
                 <Send size={20} />

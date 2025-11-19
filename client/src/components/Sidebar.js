@@ -46,7 +46,7 @@ const Sidebar = ({ messages, show, onClose }) => {
                 className="bg-gray-700/50 rounded-lg p-3 hover:bg-gray-700 transition-colors cursor-pointer"
               >
                 <div className="flex items-start space-x-2">
-                  <MessageSquare size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <MessageSquare size={16} className="text-accent mt-1 flex-shrink-0" />
                   <div className="text-sm text-gray-300 line-clamp-2">
                     {msg.content}
                   </div>

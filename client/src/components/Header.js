@@ -17,7 +17,7 @@ const Header = ({ onToggleSidebar, onReset }) => {
             <img 
               src="/logo.jpeg" 
               alt="BIAnexus Logo" 
-              className="h-12 w-12 rounded-lg object-cover"
+              className="h-14 w-14 rounded-lg object-contain bg-white p-1"
             />
             <div>
               <h1 className="text-2xl font-bold text-white">BIAnexus</h1>
@@ -27,9 +27,9 @@ const Header = ({ onToggleSidebar, onReset }) => {
         </div>
         
         <div className="flex items-center space-x-3">
-          <div className="hidden md:flex items-center space-x-2 bg-green-900/30 border border-green-700 px-3 py-1.5 rounded-lg">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm text-green-400">System Active</span>
+          <div className="hidden md:flex items-center space-x-2 bg-accent/20 border border-accent/50 px-3 py-1.5 rounded-lg">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            <span className="text-sm text-accent">System Active</span>
           </div>
           
           <button
