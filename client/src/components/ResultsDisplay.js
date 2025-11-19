@@ -136,7 +136,7 @@ const ResultsDisplay = ({ data }) => {
               <h4 className="text-lg font-semibold text-white mb-3">Involved Pathways</h4>
               <div className="flex flex-wrap gap-2">
                 {data.results.pathways.map((pathway, idx) => (
-                  <span key={idx} className="bg-primary/20 border border-primary/40 text-primary px-3 py-1 rounded-full text-sm">
+                  <span key={idx} className="bg-accent/30 border border-accent text-white px-3 py-1 rounded-full text-sm">
                     {pathway}
                   </span>
                 ))}
@@ -351,7 +351,7 @@ const ResultsDisplay = ({ data }) => {
                     <div className="text-gray-400 mb-2">Pathways:</div>
                     <div className="flex flex-wrap gap-2">
                       {data.results.pathways.map((pathway, idx) => (
-                        <span key={idx} className="bg-primary/20 border border-primary/40 text-primary px-3 py-1 rounded-full text-xs">
+                        <span key={idx} className="bg-accent/30 border border-accent text-white px-3 py-1 rounded-full text-xs">
                           {pathway}
                         </span>
                       ))}
@@ -377,7 +377,7 @@ const ResultsDisplay = ({ data }) => {
             <div className="grid gap-3">
               {data.results.pathways.map((pathway, idx) => (
                 <div key={idx} className="flex items-center space-x-3 bg-gray-800 rounded p-3">
-                  <CheckCircle className="text-primary" size={20} />
+                  <CheckCircle className="text-accent" size={20} />
                   <span className="text-white">{pathway}</span>
                 </div>
               ))}
