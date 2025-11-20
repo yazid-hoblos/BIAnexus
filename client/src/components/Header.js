@@ -17,7 +17,7 @@ const Header = ({ onToggleSidebar, onReset }) => {
             <img 
               src="/logo-no-background.png" 
               alt="BIAnexus Logo" 
-              className="h-16 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
             <div>
               <h1 className="text-2xl font-bold text-white">BIAnexus</h1>
