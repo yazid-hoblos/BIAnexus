@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
-import { Download, AlertCircle, CheckCircle, Info, TrendingUp } from 'lucide-react';
+import { Download, AlertCircle, CheckCircle, Info, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
 
 const ResultsDisplay = ({ data }) => {
+  const [showSteps, setShowSteps] = useState(false);
+  
   if (!data) return null;
 
   const handleExport = (format) => {
@@ -67,6 +69,38 @@ const ResultsDisplay = ({ data }) => {
 
   return (
     <div className="space-y-4">
+      {/* Processing Steps Display */}
+      {data.processingSteps && data.processingSteps.length > 0 && (
+        <div className="bg-gray-700/30 rounded-lg overflow-hidden">
+          <button
+            onClick={() => setShowSteps(!showSteps)}
+            className="w-full flex items-center justify-between p-4 hover:bg-gray-700/50 transition-colors"
+          >
+            <div className="flex items-center">
+              <CheckCircle className="text-accent mr-2" size={16} />
+              <h4 className="text-sm font-semibold text-white">
+                Processing Steps ({data.processingSteps.length})
+              </h4>
+            </div>
+            {showSteps ? (
+              <ChevronUp className="text-gray-400" size={20} />
+            ) : (
+              <ChevronDown className="text-gray-400" size={20} />
+            )}
+          </button>
+          {showSteps && (
+            <div className="px-4 pb-4 space-y-2 border-t border-gray-600 pt-3">
+              {data.processingSteps.map((step, idx) => (
+                <div key={idx} className="flex items-start space-x-2 text-sm">
+                  <div className="text-accent mt-0.5">✓</div>
+                  <div className="text-gray-300">{step}</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Metrics Display */}
       {data.metrics && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
