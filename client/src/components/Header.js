@@ -15,9 +15,9 @@ const Header = ({ onToggleSidebar, onReset }) => {
           </button>
           <div className="flex items-center space-x-3">
             <img 
-              src="/logo.jpeg" 
+              src="/logo-no-background.png" 
               alt="BIAnexus Logo" 
-              className="h-14 w-14 rounded-lg object-contain bg-white p-1"
+              className="h-16 w-auto object-contain"
             />
             <div>
               <h1 className="text-2xl font-bold text-white">BIAnexus</h1>
